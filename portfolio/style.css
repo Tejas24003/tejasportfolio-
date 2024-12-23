@@ -1,0 +1,337 @@
+@font-face {
+    font-family: "Messapia";
+    src: url("fonts/Messapia-Bold.woff2") format("woff2"),
+         url("fonts/Messapia-Bold.woff") format("woff");
+  }
+
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+  }
+  body{
+      font-family: Messapia;
+      background-color: #010101;
+       overflow: hidden;
+     cursor: none;  
+    
+  }
+  a{
+      text-decoration: none;
+	  padding: 10px;
+     color: #e8f0fe;
+  }
+  
+  main{
+	position: relative;
+  }
+.h6{
+    color: white;
+}
+
+  .menu_top{
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	top: 50px;
+	left: 50px;
+	width: calc(100% - 100px);
+}
+
+.menu a{
+	font-size: 18px;
+	color: #fff;
+	text-transform: uppercase;
+	display: inline-block;
+}
+
+.logo a span{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-color: #cdff03;
+	border-radius: 50px;
+	margin-right: 5px;
+	animation: dot 4s linear infinite 0s;
+}
+@keyframes dot {
+	20%{background-color: #cdff03;}
+	40%{background-color: #ffffff;}
+	60%{background-color: #00ffd2;}
+	80%{background-color: #f0ff00;}
+	100%{background-color: #8900ff;}
+}
+
+.hero_sec{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+
+}
+.hero_sec h1{
+	font-size: 76px;
+	text-transform: uppercase;
+	color: #fff;
+}
+.hero_sec h1 span{
+	display: inline-block;
+}
+
+ .hero_sec_inner{
+	position: relative;
+ }
+
+@media (max-width: 768px) {
+    .menu_top {
+        top: 10px; /* Reduced top space for mobile */
+        left: 10px; /* Adjust left space for mobile */
+        width: calc(100% - 20px); /* Full width with some padding */
+    }
+
+    .menu a {
+        font-size: 16px; /* Slightly smaller font size */
+    }
+
+    .hero_sec h1 {
+        font-size: 48px; /* Smaller font for mobile */
+		text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu a {
+        font-size: 14px; /* Even smaller font for smaller screens */
+    }
+
+    .hero_sec h1 {
+        font-size: 36px; /* Further reduce font size */
+		text-align: center;
+    }
+}
+
+/* svg */
+#str{
+position: absolute;
+}
+svg{
+	height: 500px;
+	width: 150%;
+	color: #fff;
+  /* background-color: #00ffd2; */
+}
+#cursor{
+    mix-blend-mode:difference;
+    height: 20px;
+    width: 20px; ;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: fixed;
+   
+}
+
+#overlay{
+    background-color:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    font-size: 5px;
+
+}
+
+/* after and before  */
+ 
+.left_animation a:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #3498db; /* Color of the underline */
+    transition: all 0.4s ease;
+}
+.left_animation a:after {
+    bottom: 0; /* Appears below the text */
+    left: 0;
+}
+.left_animation a:hover {
+    color: #3498db; /* Change text color on hover */
+} 
+.left_animation a:hover:after {
+    width: 95%; /* Expands the line to cover the text */
+}
+
+
+
+
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background:  #3498db;
+    border-radius: 5px;
+}
+.side_menu{
+    height: 100%;
+    width: 350px;
+    /* background-color: ; */
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    cursor:default;
+    overflow: hidden;
+    overflow-y: scroll;
+    transform: translateX(350px);
+    
+}
+.side_top_title{
+    position: sticky;
+    top: 0;
+    z-index: 11;
+    background-color: #3498db;
+    color: #010101;
+
+    width: 350px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.side_top_title i{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+.side_top_title h2{
+letter-spacing: 5px;
+    color: #010101;
+   
+    
+}
+
+.hav{
+    background-color: #010101;
+    height: 150px;
+    width: 250px;
+    margin: 50px;
+    border-radius: 5px;
+    position: relative;
+   
+}
+.hav img{
+    height: inherit;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.hav div{
+    height: inherit;
+    width: 250px;
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hav div:hover{
+opacity: 1;
+cursor: pointer;
+transform: translateZ(-40px);
+transition: 0.6s;
+color: #fff;
+background-color: rgba(0, 0, 0, .7);
+}
+.let_connect{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.connection_details{
+    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+    gap: 15px;
+}
+.connection_details i{
+    font-size: 20px;
+}
+.connection_details div{
+     padding: 10px;
+    /* background-color: #00ffd2; */
+}
+.connection_details p{
+    font-size: 10.5px;
+}
+.center{
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+}
+/* message form section */
+form{
+    cursor: text;
+}
+.message-me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.contact-input{
+    width: 80%;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    cursor: text;
+    background-color: #e8f0fe;
+}
+.contact-input:focus{
+    border: 2px solid #3498db;
+}
+button{
+    width: 30%;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+button:hover{
+border: 1px solid #010101;
+color: #3498db;
+}
+button i:hover{
+    
+    }
+.social{
+    margin: 25px;
+text-align: center;
+}
+.social i{
+    font-size: 25px;
+}
