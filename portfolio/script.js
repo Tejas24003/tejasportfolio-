@@ -27,16 +27,16 @@ str.addEventListener("mouseleave",function(){
 // Animation
 tl.from(".logo a",{
     y:-30,
-    duration:.9,
+    duration:.5,
     opacity:0,
-    stagger:0.4,
+    // stagger:0.4,
     text:"",
 })
 tl.from(".left_animation a",{
     y:-50,
-    duration:.9,
+    duration:.5,
     opacity:0,
-    stagger:0.3,
+    // stagger:0.3,
     
 })
 
@@ -74,15 +74,15 @@ tl.from(".left_animation a",{
 
   tl.from("#namee span",{
     x:100,
-    stagger:0.5,
+    // stagger:0.5,
     opacity:0,
-    duration:1.5,
-    ease: "elastic.out(1,0.3)",
+    duration:1,
+    ease: "elastic.out(1,.1)",
 
 })
 
 tl.to(".h1", {
-    duration: 1,
+    duration: 0.8,
     text: "Frontend Developer",
     ease: "none",
   });
